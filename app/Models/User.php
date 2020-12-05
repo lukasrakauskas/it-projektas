@@ -85,6 +85,8 @@ class User extends Authenticatable
 
     public function isWorker()
     {
+        if ($this->isAdmin())
+            return true;
         return $this->role == 'worker';
     }
 

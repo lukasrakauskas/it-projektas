@@ -16,7 +16,7 @@ class CreateTransportationsTable extends Migration
         Schema::create('transportations', function (Blueprint $table) {
             $table->id();
             $table->string('city');
-            $table->boolean('complete')->default(false);
+            $table->enum('status', ['ordered', 'transporting', 'done'])->default('ordered');
             $table->foreignId('user_id');
             $table->timestamps();
 

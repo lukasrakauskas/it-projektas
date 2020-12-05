@@ -19,11 +19,13 @@ class UserSeeder extends Seeder
         ]);
 
         User::factory()->create([
-            'email' => 'admin@example.com'
+            'email' => 'admin@example.com',
+            'role' => 'admin'
         ]);
 
         User::factory()->create([
-            'email' => 'worker@example.com'
+            'email' => 'worker@example.com',
+            'role' => 'worker'
         ]);
     }
 }

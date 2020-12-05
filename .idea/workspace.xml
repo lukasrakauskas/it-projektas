@@ -2,30 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32cf1472-ea9b-42fb-8524-eea3154744d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Worker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/flash-message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/pagination.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/transportations/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/transportations/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoadsideAssistance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoadsideAssistance.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VehicleTransportation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VehicleTransportation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Transportation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Transportation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vehicle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_23_194613_create_transportations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_23_194613_create_transportations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/roadside-assistance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roadside-assistance.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/transportations/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transportations/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transportations/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transportations/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/transportations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transportations/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vehicle-transportation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vehicle-transportation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transportations/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transportations/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +202,7 @@
       <workItem from="1607184442179" duration="2835000" />
       <workItem from="1607188356592" duration="137000" />
       <workItem from="1607188519691" duration="176000" />
-      <workItem from="1607188726687" duration="5442000" />
+      <workItem from="1607188726687" duration="9762000" />
     </task>
     <task id="LOCAL−00001" summary="Formatting changes">
       <created>1607183761583</created>
@@ -241,7 +228,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1607184306205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Add administration of users">
+      <created>1607197530592</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1607197530592</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +256,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Formatting changes" />
     <MESSAGE value="Add Laravel IDE Helper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Laravel IDE Helper" />
+    <MESSAGE value="Add administration of users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add administration of users" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

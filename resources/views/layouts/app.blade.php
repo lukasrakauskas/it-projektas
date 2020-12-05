@@ -35,10 +35,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-                    @if (auth()->check() && auth()->user()->isAdmin())
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('users.index') }}">{{ __('Vartotojai') }}</a>
-                        </li>
+                    @if (auth()->check())
+                        @if(auth()->user()->isAdmin())
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('users.index') }}">{{ __('Vartotojai') }}</a>
+                            </li>
+                        @endif
+                        @if(auth()->user()->isWorker())
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ route('transportations.list') }}">{{ __('Transportavimai') }}</a>
+                            </li>
+                        @endif
                     @endif
                 </ul>
 

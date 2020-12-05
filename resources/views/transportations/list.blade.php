@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         {{ __('Automobilio transportavimo užsakymai') }}
@@ -15,8 +15,9 @@
                         <table class="table">
                             <thead>
                             <tr>
+                                <th scope="col">Klientas</th>
                                 <th scope="col">Miestas</th>
-                                <th scope="col">Atlikta</th>
+                                <th scope="col">Statusas</th>
                                 <th scope="col">Užsakymo data</th>
                                 <th></th>
                             </tr>
@@ -24,24 +25,20 @@
                             <tbody>
                             @foreach ($transportations as $transportation)
                                 <tr>
-                                    <th>{{ $transportation->city }}</th>
-                                    <td>
-                                        @if ($transportation->complete)
-                                            Atlikta
-                                        @else
-                                            Neatlikta
-                                        @endif
-                                    </td>
+                                    <td>{{ $transportation->user->getFullName() }}</td>
+                                    <td>{{ $transportation->city }}</td>
+                                    <td>{{ $statuses[$transportation->status] }}</td>
                                     <td>{{ $transportation->created_at }}</td>
                                     <td>
-                                        @if (!$transportation->complete)
-                                            <form action="{{ route('transportations.destroy', $transportation->id) }}"
-                                                  method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button href="#" class="btn btn-link text-danger">Atšaukti</button>
-                                            </form>
-                                        @endif
+                                        <a href="{{ route('transportations.edit', $transportation->id) }}"
+                                           class="btn btn-link">Keisti statusą</a>
+                                        <form class="d-inline"
+                                              action="{{ route('transportations.destroy', $transportation->id) }}"
+                                              method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button href="#" class="btn btn-link text-danger">Ištrinti</button>
+                                        </form>
                                     </td>
                                 </tr>
                             </tbody>

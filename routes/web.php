@@ -27,4 +27,8 @@ Route::get('/roadside-assistance/cancel', [RoadsideAssistance::class, 'cancel'])
 
 Route::resource('/transportations', VehicleTransportation::class)->only(['index', 'create', 'store', 'destroy']);
 
+Route::get('/transportations/list', [VehicleTransportation::class, 'list'])->name('transportations.list')->middleware('worker');
+Route::get('/transportations/{id}/edit', [VehicleTransportation::class, 'edit'])->name('transportations.edit')->middleware('worker');
+Route::put('/transportations/{id}', [VehicleTransportation::class, 'update'])->name('transportations.update')->middleware('worker');
+
 Route::resource('users', UserController::class)->except(['create', 'store', 'show'])->middleware('admin');

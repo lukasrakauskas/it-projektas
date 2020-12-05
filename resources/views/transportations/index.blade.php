@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     {{ __('Automobilio transportavimas') }}
@@ -25,17 +25,11 @@
                         <tbody>
                         @foreach ($transportations as $transportation)
                             <tr>
-                                <th>{{ $transportation->city }}</th>
-                                <td>
-                                    @if ($transportation->complete)
-                                        Atlikta
-                                    @else
-                                        Neatlikta
-                                    @endif
-                                </td>
+                                <td>{{ $transportation->city }}</td>
+                                <td>{{ $statuses[$transportation->status] }}</td>
                                 <td>{{ $transportation->created_at }}</td>
                                 <td>
-                                    @if (!$transportation->complete)
+                                    @if ($transportation->status != 'done')
                                         <form action="{{ route('transportations.destroy', $transportation->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')

@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Validator;
 
 class VehicleTransportation extends Controller
 {
+    private $statuses = [
+        'ordered' => 'Paslauga užsakyta',
+        'transporting' => 'Automobilis transportuojamas',
+        'done' => 'Automobilis aikštelėje'
+    ];
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -17,7 +23,7 @@ class VehicleTransportation extends Controller
     public function index()
     {
         $transportations = Auth::user()->transportations()->orderBy('created_at', 'desc')->get();
-        return view('transportations.index', ['transportations' => $transportations]);
+        return view('transportations.index', ['transportations' => $transportations, 'statuses' => $this->statuses]);
     }
 
     public function create()
@@ -54,8 +60,38 @@ class VehicleTransportation extends Controller
 
     public function list()
     {
-        $transportations = Transportation::orderBy('created_at', 'desc')->get();
-        return view('transportations.list', ['transportations' => $transportations]);
+        $transportations = Transportation::with('user')->orderBy('created_at', 'desc')->get();
+        return view('transportations.list', ['transportations' => $transportations, 'statuses' => $this->statuses]);
+    }
+
+    public function edit($id)
+    {
+        $transportation = Transportation::with('user')->findOrFail($id);
+        return view('transportations.edit', ['transportation' => $transportation, 'statuses' => $this->statuses]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $messages = [
+            'required' => 'Būtina pasirinkti statusą',
+            'in' => 'Statusas gali būti: paslauga užsakyta, automobilis transportuojamas arba automobilis aikštelėje'
+        ];
+
+        $validator = Validator::make($request->all(), [
+            'status' => 'required|in:ordered,transporting,done'
+        ], $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withInput($request->input())->withErrors($validator);
+        }
+
+        $transportation = Transportation::findOrFail($id);
+        $transportation->status = $request->input('status');
+        $transportation->save();
+
+        return redirect()
+            ->route('transportations.list')
+            ->with('success', 'Paslaugos statusas pakeistas');
     }
 
 }

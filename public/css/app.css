@@ -10903,3 +10903,12 @@ a.text-dark:focus {
   }
 }
 
+table tbody tr td {
+  vertical-align: middle !important;
+}
+
+table tbody tr td:last-of-type {
+  width: 1%;
+  white-space: nowrap;
+}
+
