@@ -6,11 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+                        @include('components.flash-message')
 
                         @error('lat')
                             <div class="alert alert-danger">{{ $message }}</div>

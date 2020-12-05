@@ -8,11 +8,7 @@
                 <div class="card-header">{{ __('Automobilio transportavimas') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    @include('components.flash-message')
 
                     <form action="{{ route('transportations.store') }}" method="POST">
                         @csrf

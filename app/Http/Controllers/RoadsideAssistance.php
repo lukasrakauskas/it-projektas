@@ -82,6 +82,6 @@ class RoadsideAssistance extends Controller
             $vehicle->save();
         }
 
-        return redirect()->to('/')->with('status', "Techninė pagalba atšaukta");
+        return redirect()->to('/')->with('success', "Techninė pagalba atšaukta");
     }
 }

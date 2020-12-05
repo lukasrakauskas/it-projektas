@@ -17,12 +17,12 @@ class VehicleTransportation extends Controller
     public function index()
     {
         $transportations = Auth::user()->transportations()->orderBy('created_at', 'desc')->get();
-        return view('transportations/index', ['transportations' => $transportations]);
+        return view('transportations.index', ['transportations' => $transportations]);
     }
 
     public function create()
     {
-        return view('transportations/create');
+        return view('transportations.create');
     }
 
     public function store(Request $request)
@@ -41,7 +41,7 @@ class VehicleTransportation extends Controller
             'city' => $request->input('city')
         ]);
 
-        return redirect('/transportations')->with('status', 'Transportavimo paslauga užsakyta');
+        return redirect('/transportations')->with('success', 'Transportavimo paslauga užsakyta');
     }
 
     public function destroy($id)
@@ -49,7 +49,13 @@ class VehicleTransportation extends Controller
         $transportation = Transportation::findOrFail($id);
         $transportation->delete();
 
-        return redirect('/transportations')->with('status', 'Transportavimo paslauga atšaukta');
+        return redirect('/transportations')->with('success', 'Transportavimo paslauga atšaukta');
+    }
+
+    public function list()
+    {
+        $transportations = Transportation::orderBy('created_at', 'desc')->get();
+        return view('transportations.list', ['transportations' => $transportations]);
     }
 
 }

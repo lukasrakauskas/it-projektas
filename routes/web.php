@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RoadsideAssistance;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VehicleTransportation;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,5 @@ Route::get('/roadside-assistance', [RoadsideAssistance::class, 'index']);
 Route::get('/roadside-assistance/cancel', [RoadsideAssistance::class, 'cancel']);
 
 Route::resource('/transportations', VehicleTransportation::class)->only(['index', 'create', 'store', 'destroy']);
+
+Route::resource('users', UserController::class)->except(['create', 'store', 'show'])->middleware('admin');

@@ -8,11 +8,7 @@
                 <div class="card-header">{{ __('Techninė pagalba įvykio vietoje') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    @include('components.flash-message')
 
                     <p>Automobilis yra mieste: {{ $vehicle->city }}</p>
                     <p>Atstumas iki automobilio: {{ round($distance, 2) }}km</p>
