@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32cf1472-ea9b-42fb-8524-eea3154744d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_ide_helper_models.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/roadside-assistance-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/roadside-assistance-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Transportation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Transportation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vehicle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +176,7 @@
       <updated>1606066826861</updated>
       <workItem from="1606066827901" duration="8035000" />
       <workItem from="1606150451254" duration="18485000" />
-      <workItem from="1607183442098" duration="468000" />
+      <workItem from="1607183442098" duration="783000" />
     </task>
     <task id="LOCAL−00001" summary="Formatting changes">
       <created>1607183761583</created>
@@ -191,7 +184,19 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1607183761583</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Add Laravel IDE Helper">
+      <created>1607183983696</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1607183983696</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Add Laravel IDE Helper">
+      <created>1607184049156</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1607184049156</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +216,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Formatting changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatting changes" />
+    <MESSAGE value="Add Laravel IDE Helper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Laravel IDE Helper" />
   </component>
 </project>
