@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="32cf1472-ea9b-42fb-8524-eea3154744d5" name="Default Changelist" comment="Add transportation administrating panel">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/VehicleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vehicles/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vehicles/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vehicles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vehicle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/VehicleFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/VehicleFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_23_173703_create_vehicles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_23_173703_create_vehicles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/roadside-assistance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roadside-assistance.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,18 +172,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/transportations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lukas\Documents\Programming\PHP\it-projektas" />
       <recent name="C:\Users\rakau\Documents\Programming\PHP\it-projektas\resources\views\transportations" />
       <recent name="C:\Users\rakau\Documents\Programming\PHP\it-projektas\resources\sass" />
       <recent name="C:\Users\rakau\Documents\Programming\PHP\it-projektas\resources\css" />
       <recent name="C:\Users\Lukas\Documents\Programming\PHP\roadside-assistance-app\resources\views\vehicle-transportation" />
-      <recent name="C:\Users\Lukas\Documents\Programming\PHP\roadside-assistance-app\resources\views" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.127.0.0.1:8000">
@@ -203,6 +216,8 @@
       <workItem from="1607188519691" duration="176000" />
       <workItem from="1607188726687" duration="10639000" />
       <workItem from="1607252378692" duration="8263000" />
+      <workItem from="1607289050141" duration="1673000" />
+      <workItem from="1607290739245" duration="196000" />
     </task>
     <task id="LOCAL−00001" summary="Formatting changes">
       <created>1607183761583</created>
@@ -272,6 +287,36 @@
     <MESSAGE value="Add transportation administrating panel" />
     <MESSAGE value="Fix user form not saving role" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix user form not saving role" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607290736850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607290736850" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607289142775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607289142775" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607289142775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607289142775" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607289142775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607289142775" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607289142775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607289142775" />
+    <state x="714" y="222" key="RollbackChangesDialog" timestamp="1607290934911">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607290934911" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607290927246">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607290927246" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
