@@ -46,6 +46,10 @@
                                 <a class="nav-link"
                                    href="{{ route('transportations.list') }}">{{ __('Transportavimai') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ route('vehicles.index') }}">{{ __('Automobiliai') }}</a>
+                            </li>
                         @endif
                     @endif
                 </ul>

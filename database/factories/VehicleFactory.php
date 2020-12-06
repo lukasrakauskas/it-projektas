@@ -21,6 +21,25 @@ class VehicleFactory extends Factory
      */
     public function definition()
     {
+        $licensePlate = $this->faker->regexify('([A-PR-VZ]){3}([0-9]){3}');
+
+        $brands = [
+            'Mercedes',
+            'Mercedes',
+            'MAN',
+            'Volkswagen',
+            'Volkswagen'
+        ];
+        $models = [
+            'Sprinter',
+            'ATEGO 918',
+            '8.163',
+            'Crafter',
+            'Transporter'
+        ];
+
+        $index = $this->faker->randomKey($brands);
+
         $city = $this->faker->randomElement(['Vilnius', 'Kaunas', 'Klaipėda']);
 
         $locations = [
@@ -44,7 +63,10 @@ class VehicleFactory extends Factory
             'city' => $city,
             'latitude' => $locations[$city]['latitude'] + $change,
             'longitude' => $locations[$city]['longitude'] + $change,
-            'available' => true
+            'available' => true,
+            'license_plate' => $licensePlate,
+            'brand' => $brands[$index],
+            'model' => $models[$index]
         ];
     }
 }

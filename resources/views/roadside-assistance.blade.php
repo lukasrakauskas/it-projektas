@@ -10,6 +10,8 @@
                 <div class="card-body">
                     @include('components.flash-message')
 
+                    <p class="font-weight-bold">{{ $vehicle->brand }} {{ $vehicle->model }}</p>
+                    <p>Valstybiniai numeriai: {{ $vehicle->license_plate }}</p>
                     <p>Automobilis yra mieste: {{ $vehicle->city }}</p>
                     <p>Atstumas iki automobilio: {{ round($distance, 2) }}km</p>
                     <a href="/roadside-assistance/cancel" class="btn btn-danger">Atsisakyti paslaugos</a>

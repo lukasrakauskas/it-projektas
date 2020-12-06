@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RoadsideAssistance;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\VehicleTransportation;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,5 @@ Route::get('/transportations/{id}/edit', [VehicleTransportation::class, 'edit'])
 Route::put('/transportations/{id}', [VehicleTransportation::class, 'update'])->name('transportations.update')->middleware('worker');
 
 Route::resource('users', UserController::class)->except(['create', 'store', 'show'])->middleware('admin');
+
+Route::resource('vehicles', VehicleController::class)->middleware('worker');

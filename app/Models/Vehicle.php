@@ -34,6 +34,10 @@ class Vehicle extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'license_plate', 'brand', 'model', 'city', 'latitude', 'longitude'
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
