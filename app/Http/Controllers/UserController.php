@@ -47,7 +47,8 @@ class UserController extends Controller
         }
 
         $user = User::findOrFail($id);
-        $user->fill($request->except('_token', 'created_at', 'updated_at'));
+        $user->fill($request->except('_token', 'created_at', 'updated_at', '_method'));
+        $user->role = $request->input('role');
         $user->save();
 
         return redirect()
