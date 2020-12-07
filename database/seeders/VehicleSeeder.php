@@ -14,6 +14,35 @@ class VehicleSeeder extends Seeder
      */
     public function run()
     {
-        Vehicle::factory(10)->create();
+        Vehicle::factory()->create([
+            'available' => false,
+            'user_id' => 1
+        ]);
+
+        Vehicle::factory(3)->create();
+
+        Vehicle::factory()->create([
+           'available' => false,
+           'user_id' => 4
+        ]);
+
+        Vehicle::factory()->create([
+            'available' => false,
+            'user_id' => 5
+        ]);
+
+        Vehicle::factory(3)->create();
+
+        Vehicle::factory()->create([
+            'available' => false,
+            'user_id' => 6
+        ]);
+
+        Vehicle::factory()->create([
+            'available' => false,
+            'user_id' => 7
+        ]);
+
+        Vehicle::factory(3)->create();
     }
 }

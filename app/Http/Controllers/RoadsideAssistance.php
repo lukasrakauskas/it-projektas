@@ -62,7 +62,9 @@ class RoadsideAssistance extends Controller
             return $distance < $distanceCurrent ? $item : $currentVehicle;
         });
 
-        // TODO: jei nera automobiliu grazinti atitinkamai kazka
+        if ($vehicle == null) {
+            return redirect()->back()->with('warning', 'Šiuo metu nėra laisvų techninės pagalbos automobilių');
+        }
 
         $vehicle->available = false;
         $vehicle->user()->associate(Auth::user());

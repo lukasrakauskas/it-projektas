@@ -17,7 +17,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">Miestas</th>
-                                <th scope="col">Atlikta</th>
+                                <th scope="col">Statusas</th>
                                 <th scope="col">Užsakymo data</th>
                                 <th></th>
                             </tr>

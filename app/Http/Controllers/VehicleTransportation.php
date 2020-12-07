@@ -53,7 +53,14 @@ class VehicleTransportation extends Controller
     public function destroy($id)
     {
         $transportation = Transportation::findOrFail($id);
+
+        // TODO: cant delete as other or not vadybnininkas
+
         $transportation->delete();
+
+        if (auth()->user()->isWorker()) {
+            return redirect('/transportations/list')->with('success', 'Transportavimo paslauga atšaukta');
+        }
 
         return redirect('/transportations')->with('success', 'Transportavimo paslauga atšaukta');
     }
