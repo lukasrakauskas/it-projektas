@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * App\Models\User
@@ -104,5 +105,22 @@ class User extends Authenticatable
     public function transportations()
     {
         return $this->hasMany(Transportation::class);
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($user) {
+            $user->transportations()->delete();
+//            Vehicle::whereUserId($user->id)->each(function ($vehicle) {
+//                $vehicle->available = true;
+//                $vehicle->user()->
+//            });
+            if ($user->vehicle()->exists()) {
+                $user->vehicle()->first()->available = true;
+                $user->vehicle()->first()->user()->dissociate();
+            }
+        });
     }
 }
